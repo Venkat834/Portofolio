@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkata Ramana | Cybersecurity Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #1E2A3A;
+            --electric-blue: #00B4D8;
+            --neon-green: #39FF14;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--light-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--electric-blue);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--neon-green);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, rgba(30,42,58,0.9) 0%, rgba(0,0,20,0.95) 100%);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 180, 216, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--electric-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--light-gray);
+            font-weight: 600;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--neon-green);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            position: relative;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 20, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero h1 span {
+            color: var(--neon-green);
+            border-right: 2px solid var(--neon-green);
+            animation: blink 0.75s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--neon-green); }
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--electric-blue);
+            color: var(--dark-blue);
+        }
+
+        .btn-primary:hover {
+            background: var(--neon-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--electric-blue);
+            color: var(--electric-blue);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-tertiary {
+            background: var(--neon-green);
+            color: var(--dark-blue);
+        }
+
+        .btn-tertiary:hover {
+            background: var(--electric-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icons {
+            display: flex;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: var(--light-gray);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--neon-green);
+            transform: translateY(-5px);
+        }
+
+        /* About Section */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--electric-blue);
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background: var(--neon-green);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-img img {
+            width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--electric-blue);
+  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--neon-green);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: rgba(0, 0, 20, 0.3);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: rgba(30, 42, 58, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--neon-green);
+        }
+
+        .skill-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover img {
+            filter: grayscale(0%);
+        }
+
+        .skill-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--electric-blue);
+        }
+
+        .skill-card p {
+            color: #ccc;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: rgba(30, 42, 58, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--neon-green);
+        }
+
+        .project-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--electric-blue);
+        }
+
+        .project-content p {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .project-tag {
+            background: rgba(0, 180, 216, 0.2);
+            color: var(--electric-blue);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        /* Certifications Section */
+        .cert-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .cert-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .cert-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover .cert-overlay {
+            transform: translateY(0);
+        }
+
+        .cert-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .cert-overlay h4 {
+            color: var(--neon-green);
+            margin-bottom: 5px;
+        }
+
+        .cert-overlay p {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: rgba(0, 0, 20, 0.3);
+        }
+
+        .experience-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: var(--light-gray);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            border-bottom: 2px solid var(--neon-green);
+            color: var(--neon-green);
+        }
+
+        .tab-btn:hover:not(.active) {
+            color: var(--electric-blue);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .experience-item {
+            background: rgba(30, 42, 58, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--electric-blue);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            border-left-color: var(--neon-green);
+            transform: translateX(10px);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            color: var(--electric-blue);
+        }
+
+        .experience-date {
+            color: var(--neon-green);
+            font-weight: 600;
+        }
+
+        .experience-company {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .experience-description {
+            margin-bottom: 10px;
+        }
+
+        .experience-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .experience-skill {
+            background: rgba(0, 180, 216, 0.2);
+            color: var(--electric-blue);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        /* Education Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--electric-blue);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background: rgba(30, 42, 58, 0.7);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            text-align: right;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--neon-green);
+            border-radius: 50%;
+            top: 20px;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .timeline-date {
+            color: var(--neon-green);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--electric-blue);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: rgba(0, 0, 20, 0.3);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(0, 180, 216, 0.5);
+            background: rgba(30, 42, 58, 0.5);
+            border-radius: 5px;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--neon-green);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: rgba(0, 0, 20, 0.5);
+            border-top: 1px solid rgba(0, 180, 216, 0.2);
+        }
+
+        footer p {
+            color: #ccc;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--dark-blue);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hamburger {
+                display: block;
+                color: white;
+                font-size: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-img {
+                margin-bottom: 30px;
+            }
+
+            .about-img img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .timeline::before {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content {
+                text-align: left;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Cyber<span>Sentinel</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Venkata Ramana</span></h1>
+                <h1>Cybersecurity Specialist</h1>
+                <p>Passionate about securing digital assets and protecting systems from threats. Specializing in penetration testing, vulnerability assessment, and security automation.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    <a href="https://drive.google.com/file/d/1F6-vl-TRDXJGHJ5IH9RbFrshOs5VKgcI/view?usp=drive_link" download class="btn btn-tertiary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/venkat8" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Venkat834" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://tryhackme.com/p/Venkataramana834" target="_blank"><i class="fas fa-lock"></i></a>
+                    <a href="mailto:venkatannamdevula834@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img fade-in">
+                    <!-- Replace with your actual profile picture -->
+                    <img src="images/my_profile pic.jpg" alt="Venkata Ramana - Cybersecurity Professional">
+                </div>
+                <div class="about-text fade-in delay-1">
+                    <h3>Cybersecurity Enthusiast & Ethical Hacker</h3>
+                    <p>I'm a Computer Science graduate with a passion for cybersecurity. My journey in security began with ethical hacking and has evolved into a comprehensive understanding of network security, penetration testing, and system hardening.</p>
+                    <p>I specialize in identifying vulnerabilities, automating security processes, and implementing robust access controls. My goal is to help organizations strengthen their security posture through proactive measures and continuous monitoring.</p>
+                    <p>When I'm not securing systems, you can find me solving challenges on TryHackMe or contributing to open-source security tools.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="https://drive.google.com/file/d/1F6-vl-TRDXJGHJ5IH9RbFrshOs5VKgcI/view?usp=drive_link" download class="btn btn-tertiary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <img src="https://cdn.worldvectorlogo.com/logos/wireshark.svg" alt="Wireshark">
+                    <h4>Wireshark</h4>
+                    <p>Network protocol analysis and packet inspection</p>
+                </div>
+                <div class="skill-card fade-in delay-1">
+                    <img src="https://www.kali.org/images/kali-logo.svg" alt="Kali Linux">
+                    <h4>Kali Linux</h4>
+                    <p>Penetration testing and security assessment</p>
+                </div>
+                <div class="skill-card fade-in delay-2">
+                    <img src="https://nmap.org/images/sitelogo-nmap.svg" alt="Nmap">
+                    <h4>Nmap</h4>
+                    <p>Network scanning and vulnerability detection</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="images/msf_console.jpg" alt="Metasploit">
+                    <h4>Metasploit</h4>
+                    <p>Penetration testing framework</p>
+                </div>
+                <div class="skill-card fade-in delay-1">
+                    <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python">
+                    <h4>Python</h4>
+                    <p>Security automation and scripting</p>
+                </div>
+                <div class="skill-card fade-in delay-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java">
+                    <h4>Java</h4>
+                    <p>Intermediate application development</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+                    <h4>C++</h4>
+                    <p>Basic system programming</p>
+                </div>
+                <div class="skill-card fade-in delay-1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Gnu-bash-logo.svg" alt="Bash">
+                    <h4>Bash</h4>
+                    <p>Intermediate shell scripting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Metasploit Automation">
+                    </div>
+                    <div class="project-content">
+                        <h3>Automating Penetration Testing</h3>
+                        <p>Automated penetration testing tasks using Metasploit resource scripts to streamline ethical hacking workflows. Improved security assessments by scripting common attack steps.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Metasploit</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Bash</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in delay-1">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Linux Access Control">
+                    </div>
+                    <div class="project-content">
+                        <h3>Linux Access Control</h3>
+                        <p>Implemented role-based access control, file permissions, and SELinux policies to safeguard critical directories. Reduced unauthorized access incidents by 35%.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Linux</span>
+                            <span class="project-tag">SELinux</span>
+                            <span class="project-tag">RBAC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in delay-2">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Network Assessment">
+                    </div>
+                    <div class="project-content">
+                        <h3>Network Vulnerability Assessment</h3>
+                        <p>Conducted in-depth network scans to uncover security weaknesses, leading to a 40% reduction in potential threats. Provided actionable recommendations.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Nmap</span>
+                            <span class="project-tag">Wireshark</span>
+                            <span class="project-tag">Risk Assessment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certifications</h2>
+            </div>
+            <div class="cert-gallery">
+                <div class="cert-card fade-in">
+                    <img src="images/learntube-certi.jpg" alt="Cybersecurity Assessment Certificate">
+                    <div class="cert-overlay">
+                        <h4>Complete Cybersecurity Assessment</h4>
+                        <p>LearnTube by CareerNinja</p>
+                    </div>
+                </div>
+                <div class="cert-card fade-in delay-1">
+                    <img src="images/EHE cert.jpg" alt="Ethical Hacking Certificate">
+                    <div class="cert-overlay">
+                        <h4>Ethical Hacking Essentials</h4>
+                        <p>EC Council (Coursera)</p>
+                    </div>
+                </div>
+                <div class="cert-card fade-in delay-2">
+                    <img src="images/DFE cert.jpg" alt="Digital Forensics Certificate">
+                    <div class="cert-overlay">
+                        <h4>Digital Forensics Essentials</h4>
+                        <p>EC Council (Coursera)</p>
+                    </div>
+                </div>
+                <div class="cert-card fade-in">
+                    <img src="images/linux fundamentals cert.jpg" alt="Linux Fundamentals Certificate">
+                    <div class="cert-overlay">
+                        <h4>Linux Fundamentals</h4>
+                        <p>LPU</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience</h2>
+            </div>
+            
+            <div class="experience-tabs">
+    
+                <button class="tab-btn active" data-tab="training">Training</button>
+                <button class="tab-btn" data-tab="tryhackme">TryHackMe</button>
+            </div>
+            
+            
+            
+            <div class="tab-content active" id="training">
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Linux System Administration Training</h3>
+                        
+                    </div>
+                    <p class="experience-company">Intensive Training Program</p>
+                    <p class="experience-description">
+                        Acquired comprehensive knowledge of navigating and administering Linux systems through command-line interface.
+                        Learned key Linux commands for file management, process control, and system navigation.
+                    </p>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Linux CLI</span>
+                        <span class="experience-skill">File Permissions</span>
+                        <span class="experience-skill">User Management</span>
+                        <span class="experience-skill">Disk Partitioning</span>
+                        <span class="experience-skill">Networking</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tryhackme">
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <h3 class="experience-title">TryHackMe Cybersecurity Challenges</h3>
+                        
+                    </div>
+                    <p class="experience-company">Online Platform</p>
+                    <p class="experience-description">
+                        Actively engaged in solving cybersecurity challenges on TryHackMe platform.
+                        Maintained a daily streak and earned eight badges for completing various security tracks.
+                        Completed 50+ rooms covering diverse cybersecurity topics including:
+                    </p>
+                    <ul class="experience-description">
+                        <li>Network security and penetration testing</li>
+                        <li>Web application security</li>
+                        <li>Cryptography and encryption</li>
+                        <li>Digital forensics and incident response</li>
+                    </ul>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Penetration Testing</span>
+                        <span class="experience-skill">Network Security</span>
+                        <span class="experience-skill">Web Security</span>
+                        <span class="experience-skill">Cryptography</span>
+                        <span class="experience-skill">Forensics</span>
+                    </div>
+                    <a href="https://tryhackme.com/p/Venkataramana834" target="_blank" class="btn btn-secondary" style="margin-top: 15px;">
+                        View My TryHackMe Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - Present</div>
+                        <h3 class="timeline-title">Bachelor of Technology - Computer Science</h3>
+                        <p>Lovely Professional University</p>
+                        <p>CGPA: 7.1</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in delay-1">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - 2022</div>
+                        <h3 class="timeline-title">Intermediate</h3>
+                        <p>Sri Shiridi Sai Educational Institute</p>
+                        <p>Percentage: 92%</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in delay-2">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2020</div>
+                        <h3 class="timeline-title">Matriculation</h3>
+                        <p>Lotus National School</p>
+                        <p>Percentage: 80%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Venkata Ramana Annamdevula. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                navLinks.classList.remove('active');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll Animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+
+        // Typewriter Effect
+        const textElements = document.querySelectorAll('.hero h1 span');
+        const texts = ["Venkata Ramana", "Ethical Hacker", "Security Analyst"];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+            
+            textElements.forEach(el => {
+                el.textContent = letter;
+            });
+            
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000);
+            } else {
+                setTimeout(type, 100);
+            }
+        }());
+
+        // Experience Tabs
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+    
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
